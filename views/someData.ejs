@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice with EJs</title>
+</head>
+<body>
+    <h1>Passing Some Data Here</h1>
+    <%for (const user of users){%>
+        <p>The user is <%=user.name%> whose age is <%=user.age%> 
+            <%=user.isAdmin? 'is also and admin': '' %>
+        </p>
+    <%}%>
+</body>
+</html>

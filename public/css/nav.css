@@ -1,0 +1,33 @@
+/* Header Styles */
+header {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 1em 2em;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+header h1 {
+  margin: 0;
+  font-size: 1.75em;
+}
+.appnav {
+    display: flex;
+    justify-content: center;
+    background-color: #343a40;
+    padding: 1em;
+  }
+  
+  .appnav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .appnav a:hover {
+    background-color: #495057;
+  }
