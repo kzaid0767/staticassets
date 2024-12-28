@@ -1,0 +1,30 @@
+{
+  "name": "staticassets",
+  "version": "1.0.0",
+  "description": "nodejs express static assets",
+  "keywords": [
+    "nodejs",
+    "expressjs"
+  ],
+  "homepage": "https://github.com/kzaid0767/staticassets#readme",
+  "bugs": {
+    "url": "https://github.com/kzaid0767/staticassets/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kzaid0767/staticassets.git"
+  },
+  "license": "ISC",
+  "author": "Kassim Zaid",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
