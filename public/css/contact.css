@@ -11,6 +11,10 @@ body {
     text-align: center;
     padding: 1em 0;
   }
+
+  a{
+    color: inherit;
+  }
   
   .container {
     max-width: 800px;
