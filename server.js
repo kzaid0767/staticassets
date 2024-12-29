@@ -1,4 +1,5 @@
 import express from "express";
+import expressEjsLayouts from "express-ejs-layouts";
 import path from 'path' 
 import { fileURLToPath } from 'url';
 
@@ -10,8 +11,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, 'public')))
+
+
 //include ejs
 app.set('view engine', 'ejs')
+
+//inclue ejs layouts
+//app.use(expressEjsLayouts)
 app.get('/', async (req,res)=>{
    //res.sendFile(path.join(__dirname,'views','home.html'))
     try {
@@ -69,6 +75,14 @@ app.get('/users', async (req,res)=>{
 app.get('/products', (req,res)=>{
     const products = [{name:'book',price:7},{name:'toy',price:5},{name:'watch',price:71},]
     res.render('products',{items:products})
+})
+//404 error
+app.use((req,res,next)=>{
+    const error = new Error('The page was not found')
+    next(error)
+})
+app.use((err,req,res,next)=>{
+    res.render('error',{error:err.message})
 })
 
 app.listen(port, ()=>{
